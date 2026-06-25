@@ -21,5 +21,27 @@ drum track <name> <attr>=<val> ...;
 ```
 score <name> <attr>=<val> ... { ... }
 ```
-score加乐谱名加零到多个属性，再加花括号包裹的音符区（后续会提），以此定义一个乐谱，属性有key（默认0）, unit（默认1）, vel（默认100）, hook（默认None）
+score加乐谱名加零到多个属性，再加花括号包裹的音符区（后续会提），以此定义一个乐谱，属性有key（默认0）, unit（默认1）, vel（默认100）, hook（默认None）。
 ### template
+```
+template <name> beats=... notes=... { ... }
+```
+template加模板名加固定的beats，notes两个属性，再加花括号包裹的音符区，以此定义一个模板，beats和notes都是正整数。
+```
+early template <name> beats=... notes=... { ... }
+```
+前面追加early关键字，即可定义提前模板。
+### 内联python
+```
+`<python>`
+```
+反引号内包裹任意不含反引号的python代码（换行符可以包裹）。
+```
+`
+def hello():
+  print('hello world')
+__export__ = ['hello']
+`
+```
+用__export__把变量导出到MusicScript的作用域中。
+
