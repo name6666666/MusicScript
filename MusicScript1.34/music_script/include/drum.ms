@@ -1,0 +1,16 @@
+{% macro tom1() %}.1{% endmacro %}
+{% macro tom2() %}.2{% endmacro %}
+{% macro kick1() %}''2{% endmacro %}
+{% macro kick2() %}..1{% endmacro %}
+{% macro snare1() %}..2{% endmacro %}
+{% macro snare2() %}..3{% endmacro %}
+{% macro hat1() %}6{% endmacro %}
+{% macro hat2() %}..s4{% endmacro %}
+{% macro hat3() %}..s5{% endmacro %}
+{% macro wistle1() %}7{% endmacro %}
+{% macro wistle2() %}'1{% endmacro %}
+{% macro cymbal() %}.s1{% endmacro %}
+{% macro ding() %}'6{% endmacro %}
+{% macro shaker() %}'7{% endmacro %}
+{% macro chime() %}''1{% endmacro %}
+{% macro clap() %}..s2{% endmacro %}
