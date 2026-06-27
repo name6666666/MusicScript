@@ -1,0 +1,2 @@
+class MusicScriptError(Exception):
+    pass
