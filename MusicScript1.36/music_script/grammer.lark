@@ -1,0 +1,26 @@
+start: _stmt*
+
+_stmt: track | score | python | template
+
+
+track: [DRUM] "track" NAME [attr]* ";"
+DRUM: "drum"
+
+score: "score" NAME [attr]* "{" TEXT2 "}"
+
+python: "`" TEXT1 "`"
+
+template: [EARLY] "template" NAME [attr]* "{" TEXT2 "}"
+EARLY: "early"
+
+attr: NAME "=" (INT | FLOAT | python)
+
+
+TEXT1: /[^`]+/
+TEXT2: /[^{}]+/
+%import common.CNAME -> NAME
+INT: /-?\d+/
+FLOAT: /-?\d+\.\d+/
+%import common.WS
+%ignore WS
+
